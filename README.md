@@ -27,6 +27,26 @@ Code:
     return true;
     }
 
+Test: "It should ingnore capitilization."
+code:
+const word = ("lAtIn").toLowerCase
+expected output: "latin"
+
+Test: "It should ignore punctuation at the end of a word."
+code:
+const word = "latin."
+expected output: atinlay
+
+Test: "It should ignore non letter characters."
+code:
+const nonWord = "7"
+expected output: "7"
+
+Test: "It should always capitalize the first letter of the first word of a sentence."
+code:
+const sentence = "Hello there."
+expected output: "Ellohay heretay."
+
 Test: "It should add "way" to the end of words beginning with a vowel."
 Code:
   let pigVowelWord;
@@ -54,6 +74,11 @@ const firstChar = word[0];
   if (firstChar !== vowel && firstChar !== "q" )
   let pigConsWord = (word.slice(0) + firstChar).concat("ay");
 
+
+
+
+
+
 // Example
 function numberOfOccurrencesInText(word, text) {
   if (text.trim().length === 0) {
@@ -65,6 +90,7 @@ function numberOfOccurrencesInText(word, text) {
     if (word.toLowerCase() === element.toLowerCase()) {
       wordCount++;
     }
+    
   });
   return wordCount;
 }
