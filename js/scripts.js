@@ -42,10 +42,13 @@ function pigLatin(string) {
   console.log(splitPig);
   let pigArray = [];
   for (i = 0; i < splitPig.length; i++) {
-    if (pigVowel(splitPig[i]) === true)
-      pigArray.push(splitPig[i] + "way")
-  }
-
+    if (pigVowel(splitPig[i]) === true);
+      pigArray.push(splitPig[i] + "way");
+   }
+  //if (pigQu(splitPig[i]) === true);
+  //  let splitPigQu = splitPig[i].slice(1);
+  //  pigArray.push((splitPigQu) + "quay")
+return pigArray;
 }
 
 
