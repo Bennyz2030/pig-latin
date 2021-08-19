@@ -1,17 +1,5 @@
 // business Logic
-
-// function pigLatin(word) {
-//   //const testWord = "okay";
-//   //console.log(testWord);
-//   const firstChar = word[0];
-//   const vowel = ["a","e","i","o","u"];
-//   for (i=0; i<word.length; i+=1) {
-//     //for (i=0; i<vowel.length; i+=1)
-//     if (firstChar[i] !== "a" && ) {
-//     return true;
-//       }
-//     }
-//   }
+// Buisness Logic
 
 function pigVowel(word) {
   let input = word;
@@ -30,27 +18,28 @@ function pigQu(word){
   return false;
 }
 
-// function pigConst(word) {
-//   if (pigVowel(word) === false) {
-//     return true;
-//   }
-//   return false;
-// }
+function pigConst(word) {
+   if (pigVowel(word) === false) {
+      return true;
+   }
+   return false;
+ }
 
 function pigLatin(string) {
   let splitPig = string.toLowerCase().split(" ");
   console.log(splitPig);
   let pigArray = [];
   for (i = 0; i < splitPig.length; i++) {
-    if (pigVowel(splitPig[i]) === true);
+    if (pigVowel(splitPig[i]) === true) {
       pigArray.push(splitPig[i] + "way");
-   }
-  //if (pigQu(splitPig[i]) === true);
-  //  let splitPigQu = splitPig[i].slice(1);
-  //  pigArray.push((splitPigQu) + "quay")
+   } if (pigQu(splitPig[i]) === true) { 
+   let splitPigQu = splitPig[i].slice(2);
+   pigArray.push((splitPigQu) + "quay")
+  } else if (pigConst(splitPig[i]) === true) {
+    let splitPigFirst = splitPig[i].charAt(0);
+    let splitPigCons = splitPig[i].slice(1);
+  pigArray.push((splitPigCons + splitPigFirst) + "ay")
+  }
+}
 return pigArray;
 }
-
-
-  
-  
